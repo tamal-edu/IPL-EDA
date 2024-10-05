@@ -69,8 +69,7 @@ matches_df = trimSpaceInValues(matches_df)
 deliveries_df = trimSpaceInValues(deliveries_df)
 
 # Replacing the empty values in the 'extra_types' with the 'None' When it is normal deliveries:
-deliveries_df.loc[deliveries_df['extras_type '].str.strip() ==
-                  '', 'extras_type'] = 'None'
+deliveries_df.loc[deliveries_df['extras_type '].str.strip() =='', 'extras_type'] = 'None'
 
 # Apply the cleaning functions to the matches data
 new_matchesDF = latest_teams(
